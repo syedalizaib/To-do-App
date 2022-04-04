@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.joblogic.todoapp.ui.home.HomeViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mimo_background"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.home.HomeFragment">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="vertical"
+           android:gravity="center"
+           android:paddingHorizontal="30dp"
+           android:layout_centerInParent="true"
+           android:layout_height="wrap_content">
+           <Button
+               android:layout_width="match_parent"
+               android:id="@+id/call_list"
+               android:text="Call List"
+               android:layout_height="wrap_content"/>
+           <Button
+               android:layout_width="match_parent"
+               android:id="@+id/buy_list"
+               android:text="Buy List"
+               android:layout_marginTop="20dp"
+               android:layout_height="wrap_content"/>
+           <Button
+               android:layout_width="match_parent"
+               android:id="@+id/sell_list"
+               android:text="Sell List"
+               android:layout_marginTop="20dp"
+               android:layout_height="wrap_content"/>
+       </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

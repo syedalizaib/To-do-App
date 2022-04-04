@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.joblogic.todoapp.entities.ItemToBuy" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/margin_10dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_10dp"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/colorDarkGrayB"
+                android:textSize="@dimen/text_size_small"
+                app:setText="@{viewmodel.nameValue}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_10dp"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/colorDarkGrayB"
+                android:textSize="@dimen/text_size_small"
+                app:setText="@{viewmodel.priceValue}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_10dp"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/colorDarkGrayB"
+                android:textSize="@dimen/text_size_small"
+                app:setText="@{viewmodel.quantityValue}" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
